@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
+    <q-header>
+      <q-toolbar class="bg-black text-white">
         <q-btn
           flat
           dense
@@ -12,10 +12,18 @@
         />
 
         <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
+            <q-avatar>
+              <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+            </q-avatar>
 
-        <div>Quasar v{{ $q.version }}</div>
+            Janus Containment
+
+          </q-toolbar-title>
+
+        <q-btn title="Open Clearance Card" flat round dense icon="badge" class="q-mr-xs" @click="openEmployeeBadge()" />
+        <q-btn flat round dense icon="notifications" />
+        <q-btn to="profile" flat round dense icon="account_circle" />
+
       </q-toolbar>
     </q-header>
 
@@ -42,6 +50,40 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-dialog v-model="dialog" position="bottom">
+
+      <q-card style="width: 450px">
+        <q-linear-progress :value="1" color="white" />
+
+        <q-card-section class="row items-center no-wrap">
+
+        <q-icon class="q-mr-md" size="lg" name="badge" />
+
+          <div>
+            <div class="text-weight-bold">bidwi_widbi</div>
+            <div class="text-grey">Research Intern</div>
+            <q-linear-progress size="5px" :value=".1" color="purple">
+            </q-linear-progress>
+
+            <div class="text-grey-7 text-caption q-mt-sm">
+
+              <div>Current Status: <span class="text-orange">Idle</span></div>
+
+              <div>Clearance Level: <span class="text-white">WHITE</span></div>
+
+              <div>
+                Authorisation Token: <span class="text-grey-1">227FF-1127S-SDG12-VCVJS</span>
+                <q-btn class="q-mx-sm q-px-sm" size="xs" flat icon="content_copy" />
+              </div>
+
+            </div>
+          </div>
+
+        </q-card-section>
+      </q-card>
+    </q-dialog>
+
   </q-layout>
 </template>
 
@@ -53,50 +95,43 @@ defineOptions({
   name: 'MainLayout'
 })
 
+const dialog = ref(false)
 const linksList: EssentialLinkProps[] = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: 'Employee Details',
+    icon: 'account_circle',
+    link: 'profile'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: 'Facility',
+    icon: 'rounded_corner',
+    link: 'facility'
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: 'Active Tasks',
+    icon: 'attribution',
+    link: 'tasks'
   },
   {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
+    title: 'Research',
+    icon: 'science',
+    link: 'research'
   },
   {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
+    title: 'Infirmary',
+    icon: 'local_hotel',
+    link: 'infirmary'
   },
   {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    title: 'Anomaly Codex',
+    icon: 'psychology_alt',
+    link: 'anomalies'
   }
 ]
+
+function openEmployeeBadge () {
+  dialog.value = true
+}
 
 const leftDrawerOpen = ref(false)
 

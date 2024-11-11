@@ -1,8 +1,8 @@
 {
-  "name": "hugs-charity",
+  "name": "janus-containment",
   "version": "0.0.1",
-  "description": "Website for HUGS Charity Shop",
-  "productName": "Hugs Charity",
+  "description": "Website for Janus Containment",
+  "productName": "Janus Containment",
   "author": "Luke Vella",
   "type": "module",
   "private": true,

@@ -1,6 +1,6 @@
-# Hugs Charity (hugs-charity)
+# Janus Containment (janus-containment)
 
-Website for HUGS Charity Shop
+Website for Janus Containment
 
 ## Install the dependencies
 ```bash

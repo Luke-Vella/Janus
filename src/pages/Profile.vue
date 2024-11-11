@@ -1,11 +1,11 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    Index
+    Profile
   </q-page>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'IndexPage'
+  name: 'My-Profile'
 })
 </script>

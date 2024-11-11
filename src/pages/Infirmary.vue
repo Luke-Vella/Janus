@@ -1,11 +1,11 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    Index
+    Infirmary
   </q-page>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'IndexPage'
+  name: 'The-Infirmary'
 })
 </script>

@@ -1,11 +1,11 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    Index
+    Tasks
   </q-page>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'IndexPage'
+  name: 'All-Tasks'
 })
 </script>

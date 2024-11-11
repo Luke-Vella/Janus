@@ -2,14 +2,13 @@
   <q-item
     clickable
     tag="a"
-    target="_blank"
-    :href="link"
+    :to="link"
   >
     <q-item-section
       v-if="icon"
       avatar
     >
-      <q-icon :name="icon" />
+      <q-icon :name="icon" :color="iconColor" />
     </q-item-section>
 
     <q-item-section>
@@ -29,6 +28,7 @@ export interface EssentialLinkProps {
   caption?: string;
   link?: string;
   icon?: string;
+  iconColor?: string
 };
 
 withDefaults(defineProps<EssentialLinkProps>(), {

@@ -1,11 +1,11 @@
 <template>
   <q-page class="row items-center justify-evenly">
-    Index
+    Anomaly Codex
   </q-page>
 </template>
 
 <script setup lang="ts">
 defineOptions({
-  name: 'IndexPage'
+  name: 'Anomaly-Codex'
 })
 </script>
