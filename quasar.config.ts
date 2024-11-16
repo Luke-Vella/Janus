@@ -76,8 +76,11 @@ export default configure((/* ctx */) => {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#devServer
     devServer: {
-      // https: true
-      open: true // opens browser window automatically
+      server: {
+        type: 'http'// NECESSARY (alternative is type 'http')
+      },
+      open: true, // opens browser window automatically,
+      port: 9019
     },
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#framework

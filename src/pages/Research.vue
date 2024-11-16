@@ -1,7 +1,7 @@
 <template>
-  <q-page class="row items-center justify-evenly">
+<q-page class="row items-center justify-evenly">
     Research
-  </q-page>
+</q-page>
 </template>
 
 <script setup lang="ts">

@@ -19,11 +19,8 @@
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'EssentialLink'
-})
 
-export interface EssentialLinkProps {
+export interface essentialLinkProps {
   title: string;
   caption?: string;
   link?: string;
@@ -31,7 +28,7 @@ export interface EssentialLinkProps {
   iconColor?: string
 };
 
-withDefaults(defineProps<EssentialLinkProps>(), {
+withDefaults(defineProps<essentialLinkProps>(), {
   caption: '',
   link: '#',
   icon: ''

@@ -1,0 +1,31 @@
+{
+  "username":"bidwi_widbi",
+  "avatar": "https://cdn.quasar.dev/img/boy-avatar.png",
+  "current_xp": 542,
+  "target_xp": 665,
+  "department_key": "RES",
+  "department_description": "Research",
+  "job_title_key": "RES-001",
+  "job_title_description": "Research Intern",
+  "overview":
+  {
+    "physical_condition": 100,
+    "sanity": 100,
+    "fatigue": 100
+  },
+  "statuses":
+  {
+    "psychiatric_evaluation" : ["Signs of Empathy towards anomaly #4", "Trouble Sleeping", "Minor Hallucinations"],
+    "physical": []
+  },
+  "colleagues": [],
+  "documents": [],
+  "career_statistics":
+  {
+    "tasks_completed" : 22,
+    "tasks_failed" : 3,
+    "tasks_skipped" : 5,
+    "colleagues_killed" : 0,
+    "accidents" : 5
+  }
+}
