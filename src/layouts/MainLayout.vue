@@ -1,33 +1,38 @@
 <template>
-  <q-layout  v-if="!loggedIn"  view="lHh Lpr lFf">
+  <q-layout  view="lHh Lpr lFf">
     <q-header >
-      <q-toolbar class="bg-black text-white">
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-toolbar class="bg-black text-white">
 
-        <q-toolbar-title>
-            <q-avatar>
-              <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
-            </q-avatar>
+            <q-btn
+            v-if="user.isLoggedIn"
+            flat
+            dense
+            round
+            icon="menu"
+            aria-label="Menu"
+            @click="toggleLeftDrawer"
+            />
 
-            Janus Containment
+            <q-toolbar-title @click="$router.push('/')">
+                <q-avatar>
+                <img style="height:30px" src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
+                </q-avatar>
 
-          </q-toolbar-title>
+                Janus Containment
 
-        <q-btn title="Open Clearance Card" flat round dense icon="badge" class="q-mr-xs" @click="openEmployeeBadge()" />
-        <q-btn flat round dense icon="notifications" />
-        <q-btn to="profile" flat round dense icon="account_circle" />
+            </q-toolbar-title>
 
-      </q-toolbar>
+            <div v-if="user.isLoggedIn">
+                <q-btn title="Open Clearance Card" flat round dense icon="badge" class="q-mr-xs" @click="openEmployeeBadge()" />
+                <q-btn flat round dense icon="notifications" />
+                <q-btn to="profile" flat round dense icon="account_circle" />
+            </div>
+
+        </q-toolbar>
     </q-header>
 
     <q-drawer
+      v-if="user.isLoggedIn"
       v-model="leftDrawerOpen"
       show-if-above
     >
@@ -50,31 +55,27 @@
       <router-view />
     </q-page-container>
   </q-layout>
-  <q-layout v-else>
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
 
 </template>
 
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import EssentialLink, { essentialLinkProps } from 'components/j-essential-link.vue'
+import EssentialLink, { essentialLinkProps } from 'components/EssentialLink.vue'
+import { userStore } from 'stores/user'
 
 defineOptions({
   name: 'MainLayout'
 })
 
 const dialog = ref(false),
+  user = userStore(),
   leftDrawerOpen = ref(false),
-  loggedIn = ref(false),
   linksList: essentialLinkProps[] = [
     {
-      title: 'Employee Details',
-      icon: 'account_circle',
-      link: '/profile'
+      title: 'Athena',
+      icon: 'developer_board',
+      link: '/'
     },
     {
       title: 'Facility',

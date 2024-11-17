@@ -1,29 +1,16 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <q-card   flat style="width:900px">
-
-      <q-card-section>
-        <div class="row">
-
-          <div class="col-6">
-            <q-img
-                class="rounded-borders"
-                src="/src/assets/img/janus-protocol-logo.png"
-                spinner-color="white"/>
-          </div>
-          <div class="col-6 q-pa-md text-center">
-            <div class="text-h5">Janus Containment</div>
-                  </div>
-
-        </div>
-      </q-card-section>
-
-    </q-card>
-  </q-page>
+    <q-page class="row items-center justify-evenly">
+      <LoggedInIndex v-if="user.isLoggedIn" />
+        <LoginCard  v-else />
+    </q-page>
 </template>
 
 <script setup lang="ts">
-defineOptions({
-  name: 'IndexPage'
-})
+
+import LoggedInIndex from 'components/LoggedInIndex.vue'
+import LoginCard from 'components/LoginCard.vue'
+import { userStore } from 'stores/user'
+
+const user = userStore()
+
 </script>
