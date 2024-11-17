@@ -1,7 +1,7 @@
 <template>
     <q-page class="row items-center justify-evenly">
       <LoggedInIndex v-if="user.isLoggedIn" />
-        <LoginCard  v-else />
+      <LoginCard  v-else />
     </q-page>
 </template>
 
