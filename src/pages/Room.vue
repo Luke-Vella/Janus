@@ -2,31 +2,30 @@
     <q-page padding class="row wrap items-center justify-center">
 
         <div>
-
             <q-card flat >
 
-                <q-card-section class="column row-md">
+                <q-card-section class="column row-md items-center">
 
-                        <div class="column q-pa-md">
+                        <div class="col-6 q-pa-md">
 
-                             <div style="height:600px;">
+                             <div style="height:550px;">
                                 <q-card flat class="bg-black full-height">
-                                    <q-img class="full-height bordered" fit="contain" src="/src/assets/img/facility/lab/lab-night-inactive-1.png" />
+                                    <q-img  class="full-height bordered" fit="contain" src="/src/assets/img/facility/lab/lab-night-inactive-1.png" />
                                 </q-card>
                             </div>
 
-                            <div class="row align-items-center q-pt-lg">
+                            <div class="row justify-start q-pt-lg">
 
-                                <q-btn class="q-mr-md" color="primary" label="Start Task" />
-                                <q-btn outline class="q-mr-md" color="alternate" label="Action 1" />
-                                <q-btn outline class="q-mr-md" color="alternate" label="Action 2" />
-                                <q-btn outline  color="alternate" label="Action 3" />
+                                <q-btn class="q-ma-sm" color="primary" label="Start Task" />
+                                <q-btn outline class="q-ma-sm" color="alternate" label="Action 1" />
+                                <q-btn outline class="q-ma-sm" color="alternate" label="Action 2" />
+                                <q-btn outline class="q-ma-sm"  color="alternate" label="Action 3" />
 
                             </div>
 
                         </div>
 
-                        <div class="q-pa-md">
+                        <div class="col-6 q-pa-md">
                             <LabLog />
                         </div>
                 </q-card-section>

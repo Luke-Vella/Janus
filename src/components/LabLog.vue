@@ -1,7 +1,5 @@
 <template>
     <div class="column col">
-        <q-separator  class="q-mb-md"/>
-
         <div class="row justify-center items-center text-center">
             <img style="height:25px" class="q-pr-sm" src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg">
             <div class="text-h6">Athena : Lab Log</div>
@@ -9,7 +7,7 @@
 
         <q-separator  class="q-my-md"/>
 
-        <div class="q-pr-md" style="max-height:500px;overflow: auto;">
+        <div class="q-pa-md bg-black rounded-borders" style="max-height:450px;overflow: auto;">
 
             <div class="q-mb-md">
                 <div class="text-body2">
